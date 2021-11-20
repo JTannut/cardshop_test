@@ -8,6 +8,13 @@
     <%- include layout %>
     <div class="container">
       <h2>add your monster card</h2>
+      <% if(locals.errors) { %>
+      <ul class = "alert alert-danger">
+        <% Object.values(errors).forEach(function(error){ %>
+            <li><%= error.msg %></li>
+        <% }) %>
+      </ul>
+      <% } %>
       <form class="" action="/addcard/add" method="post">
             <div class="form-group">
                   <label for="">Monster Name</label>

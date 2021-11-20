@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ADD CARD</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include layout %>
+    <div class="container">
+      <h2>add your monster card</h2>
+      <form class="" action="/addcard/add" method="post">
+            <div class="form-group">
+                  <label for="">Monster Name</label>
+                  <input type ="text" name="name" value="" class="form-control">
+                  <label for="">Power Score</label>
+                  <input type ="text" name="powerscore" value="" class="form-control">
+                  <label for="">Class</label>
+                  <input type ="text" name="cclass" value="" class="form-control">
+
+            </div>
+            <input type="submit" name="" value="บันทึก" class="btn btn-primary">
+      </form>
+      
+    </div>
+
+  </body>
+</html>

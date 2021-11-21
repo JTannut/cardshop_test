@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Market Place</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <%- include layout %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <button onclick="location.href='addcard'" type="button">add card</button>
+   <section class="section1">
+    <div class="top">
+      <h1>Welcome to MarketPlace</h1>
+      <button onclick="location.href='addcard'" type="button" class="addcard-bt">ADD CARD</button>
+
+    </div>
+    
+    
+      <%- include layout %>
+
+   </section>
+      <%= userName %>
   </body>
 </html>

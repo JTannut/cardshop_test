@@ -37,7 +37,8 @@ router.post('/add',[
     }else{
       //insert to database (name of collection in db)
       var ct = db.get('card');
-      ct.insert({
+      //ชื่อด้านหน้าคือชื่อใน database ด้านหลัง เป็น field ข้อมูลใน ejs //
+      ct.insert({  
         cdname:req.body.name,
         ps:req.body.powerscore,
         cclass:req.body.cclass
@@ -45,8 +46,9 @@ router.post('/add',[
         if(err){
           res.send(err);
         }else{
-          res.location('/addcard/add');
-          res.redirect('/addcard/add');
+          req.flash("error","Success !");
+          res.location('/addcard');
+          res.redirect('/addcard');
         }
       });
     }

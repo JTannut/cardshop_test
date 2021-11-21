@@ -8,7 +8,9 @@
     <%- include layout %>
     <div class="container">
       <h2>add your monster card</h2>
+      <%- messages() %> <!-- จะต้องติดตั้ง npm install express-session เอาไว้เก็บสถาณะ messages-->
       <% if(locals.errors) { %>
+
       <ul class = "alert alert-danger">
         <% Object.values(errors).forEach(function(error){ %>
             <li><%= error.msg %></li>
@@ -29,6 +31,11 @@
       </form>
       
     </div>
+    <script>
+      $(function(){
+        $('#messages').addclass('alert alert-success');
+      })
 
+    </script>
   </body>
 </html>
